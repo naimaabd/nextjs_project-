@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Variables for Theming */
+:root {
+  --primary-color: #20365B; /* Deep blue */
+  --secondary-color: #FBC02D; /* Subtle yellow */
+  --background-light: #FAFAFA; /* Soft off-white background */
+  --background-dark: #E9ECEF; /* Lighter gray background */
+  --text-light: #ffffff; /* White text */
+  --text-dark: #333333; /* Dark text */
+  --border-color: rgba(0, 0, 0, 0.1); /* Subtle border */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  --gradient: linear-gradient(135deg, #20365B, #5A7D8B); /* Soft gradient */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #FBC02D; /* Yellow for dark mode */
+    --secondary-color: #20365B; /* Blue for dark mode */
+    --background-light: #121212; /* Dark background for dark mode */
+    --background-dark: #1E1E1E; /* Darker background */
+    --text-light: #E9ECEF; /* Light text */
+    --text-dark: #CCCCCC; /* Muted gray text */
+    --border-color: rgba(255, 255, 255, 0.1); /* Light borders in dark mode */
+    --shadow-color: rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  }
+}
+
+/* Global Body Styling */
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+  background-image: var(--gradient);
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+/* Utility Classes for Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* FAQ Section Container */
+.faq-body {
+  background-color: var(--background-light);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+/* Category Buttons */
+.category-button {
+  background-color: var(--secondary-color); 
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.category-button:hover {
+  background-color: var(--primary-color); 
+  color: var(--text-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* Input Field Styling */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 18px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+  box-shadow: inset 0 2px 5px var(--shadow-color);
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* FAQ Headers */
+.faq-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Subheadings */
+.subheading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.subheading:hover {
+  color: var(--secondary-color);
+}
+
+/* Question Styling */
+.question {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Answer Styling */
+.answer {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Modern Button Styles */
+.button {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .faq-body {
+    padding: 20px;
+  }
+
+  .faq-header {
+    font-size: 2rem;
+  }
+
+  .category-button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  input[type="text"] {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-body {
+    padding: 15px;
+  }
+
+  .faq-header {
+    font-size: 1.8rem;
+  }
+
+  .category-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  input[type="text"] {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-body {
+    padding: 10px;
+  }
+
+  .faq-header {
+    font-size: 1.5rem;
+  }
+
+  .category-button {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+
+  input[type="text"] {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="320" fill="none" viewBox="0 0 1440 320">
+  <g>
+    <!-- Blue Section Covering 30% -->
+    <rect width="1440" height="96" fill="#20365B" />
+    
+    <!-- Soft Yellow Section for the Rest -->
+    <rect y="96" width="1440" height="224" fill="#FFF8E1" />
+
+    <!-- Calligraphy-Style Brushstroke Swirls (Yellow, confined to the blue part) -->
+    <path 
+      fill="none" 
+      stroke="#FFC759" 
+      stroke-width="3" 
+      stroke-linecap="round" 
+      d="M50 30c120 20 240 -40 400 10s400 60 600 -10 300 40 440 -10" 
+    />
+    <path 
+      fill="none" 
+      stroke="#FFC759" 
+      stroke-width="3" 
+      stroke-linecap="round" 
+      d="M0 60c140 20 300 -30 500 20s380 50 580 -10 350 40 460 -20" 
+    />
+    <path 
+      fill="none" 
+      stroke="#FFC759" 
+      stroke-width="3" 
+      stroke-linecap="round" 
+      d="M30 80c160 10 280 -20 460 20s350 30 540 -5 380 20 420 -15"
+    />
+  </g>
+</svg>
